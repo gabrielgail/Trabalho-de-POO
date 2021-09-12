@@ -84,7 +84,9 @@ class Conta{
 
 public class Principal{
     public static void main (String[] args){
-        int vetor[] = new int[10]; 
+        public static final int max_cliente_dia = 5;
+        int vetor_clientes[] = new int[max_cliente_dia];
+        int i;
         
         Scanner entrada = new Scanner(System.in);
         
@@ -95,11 +97,34 @@ public class Principal{
         
         switch (numero){
             case 1:
-                System.out.println("");
+                for(i=0;i<max_cliente_dia;i++){
+                    System.out.printf("/nDigite seu primeiro nome");
+                    vetor_clientes.nome[i] = entrada.nextLine();
+                    System.out.printf("/nAgora, a data em que deseja marcar a consulta");
+                    System.out.printf("/nDia:");
+                    vetor_clientes.dia[i] = entrada.nextLine();
+                    System.out.printf("/nMês:");
+                    vetor_clientes.mes[i] = entrada.nextLine();
+                    System.out.printf("/nAno:");
+                    vetor_clientes.ano[i] = entrada.nextLine();
+                    
+                }
+                System.out.println("/nDesculpe, mas atingimos o limite de cadastros no dia, tente voltar amanhã!");
                 break;
             case 2:
-                System.out.println("");
+                String teste;
+                System.out.printf("/nNome");
+                teste = entrada.nextLine();
+                do{
+                    if(teste==vetor_clientes.nome[i]){
+                        
+                    }else{
+                        
+                    }
+                    i++;   
+                }(while teste!=vetor_clientes.nome[i] && i<5);
                 break;
+            default: System.exit(0);
         }
         
         Cliente c1,c2,c3,c4,c5;
@@ -112,7 +137,7 @@ public class Principal{
         c4 = new Cliente ("Bia",d3);
         c5 = new Cliente ("Yasmin",d3);
         
-        /**Conta c1,c2,c3;
+        Conta c1,c2,c3;
         c1 = new Conta("Maria",1010,1000);
         
         c1.depositar(500);
