@@ -1,7 +1,7 @@
 //Trabalho-de-POO
 //Desenvolvido por Gabriel Gail Ferreira e Bruna Cannavan Lanna
 
-//construtores
+    //construtores
 
 class Data {
     int dia, mes, ano;
@@ -77,6 +77,7 @@ class Cliente {
     //constante
     
     final int num_max_clientes = 5;
+        
     
     //variável de classe
     
@@ -116,13 +117,14 @@ class Cliente {
 public class Principal{ //classe principal do programa
     public static void main (String[] args){
         
-        //comandos de entrada
+        //comandos de entrada/cadastro
         
         Cliente c1,c2,c3,c4,c5;
         
         Data d1 = new Data (1,9,2021);
         Data d2 = new Data (2,9,2021);
         Data d3 = new Data (3,9,2021);
+        Data d4 = new Data (4,9,2021);
         
         c1 = new Cliente ("Maria",d1);
         c2 = new Cliente ("Ana",d1);
@@ -130,14 +132,23 @@ public class Principal{ //classe principal do programa
         c4 = new Cliente ("Bia",d3);
         c5 = new Cliente ("Yasmin",d3);
         
+        //alteração
+        
+        c5 = new Cliente ("Yasmin Silva",d4);
+        
         System.out.printf("Total de clientes: %d\n\n", Cliente.total_clientes); //total de clientes no dia
         
-        //comandos de saída
+        //estrutura de repetição com variável de controle
         
-        System.out.printf("%s\n\n",c1.toString());
-        System.out.printf("%s\n\n",c2.toString());
-        System.out.printf("%s\n\n",c3.toString());
-        System.out.printf("%s\n\n",c4.toString());
-        System.out.printf("%s\n\n",c5.toString());
+        for(int i=0; i < 1; i++){
+            
+        //comandos de saída/busca
+        
+            System.out.printf("%s\n\n",c1.toString());
+            System.out.printf("%s\n\n",c2.toString());
+            System.out.printf("%s\n\n",c3.toString());
+            System.out.printf("%s\n\n",c4.toString());
+            System.out.printf("%s\n\n",c5.toString());  
+        }
     }
 }
